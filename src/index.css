@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Brand Tokens */
+    --primary: 130 46% 33%;
+    --primary-foreground: 42 29% 96%;
+    --primary-light: 132 47% 91%;
+    --primary-dark: 130 57% 19%;
+
+    --harvest: 30 86% 47%;
+    --harvest-foreground: 37 20% 10%;
+    --harvest-light: 37 100% 93%;
+    --harvest-dark: 30 100% 24%;
+
+    --warm-white: 42 29% 96%;
+    --warm-mid: 37 11% 48%;
+    --warm-dark: 37 20% 10%;
+
+    /* Semantic Tokens */
+    --background: 42 29% 97%;
+    --foreground: 37 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 37 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 37 20% 10%;
+
+    --secondary: 132 47% 91%;
+    --secondary-foreground: 130 46% 33%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 37 11% 48%;
+
+    --accent: 37 100% 93%;
+    --accent-foreground: 37 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 132 30% 88%;
+    --input: 132 30% 88%;
+    --ring: 130 46% 33%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 37 20% 10%;
+    --sidebar-primary: 130 46% 33%;
+    --sidebar-primary-foreground: 42 29% 96%;
+    --sidebar-accent: 132 47% 91%;
+    --sidebar-accent-foreground: 37 20% 10%;
+    --sidebar-border: 132 30% 88%;
+    --sidebar-ring: 130 46% 33%;
+
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(132 47% 91%) 0%, hsl(42 29% 97%) 50%, hsl(37 100% 95%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(130 46% 33%), hsl(130 57% 19%));
+    --gradient-harvest: linear-gradient(135deg, hsl(30 86% 47%), hsl(30 100% 38%));
+    --gradient-card: linear-gradient(180deg, hsl(132 47% 91% / 0.3) 0%, hsl(0 0% 100%) 40%);
+
+    /* Shadows */
+    --shadow-card: 0 2px 12px hsl(130 46% 33% / 0.08), 0 1px 3px hsl(130 46% 33% / 0.06);
+    --shadow-card-hover: 0 8px 24px hsl(130 46% 33% / 0.15), 0 2px 6px hsl(130 46% 33% / 0.08);
+    --shadow-btn: 0 4px 14px hsl(130 46% 33% / 0.3);
+    --shadow-harvest: 0 4px 14px hsl(30 86% 47% / 0.3);
+
+    /* Transitions */
+    --transition-fast: all 0.15s ease-out;
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-light));
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animated underline for links */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  transition: width 0.25s ease-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Shimmer for skeleton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Fade in up */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Card hover effect */
+.product-card {
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Blob backgrounds */
+.blob-bg::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, hsl(var(--primary-light) / 0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.blob-bg::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, hsl(var(--harvest-light) / 0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+  pointer-events: none;
+}
