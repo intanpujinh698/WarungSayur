@@ -158,9 +158,6 @@ importers:
       vaul:
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-      vite-plugin-enter-dev:
-        specifier: ^0.0.7
-        version: 0.0.7(vite@7.3.2(@types/node@24.12.2)(jiti@1.21.7))
       zod:
         specifier: ^4.1.5
         version: 4.4.3
@@ -204,9 +201,6 @@ importers:
       globals:
         specifier: ^16.3.0
         version: 16.5.0
-      pnpm:
-        specifier: 8.6.12
-        version: 8.6.12
       postcss:
         specifier: ^8.5.6
         version: 8.5.14
@@ -2207,11 +2201,6 @@ packages:
     resolution: {integrity: sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==}
     engines: {node: '>= 6'}
 
-  pnpm@8.6.12:
-    resolution: {integrity: sha512-Eza4C5SO/Xl5IYozupbZ5NOA5leBRPYxmXmXfe7G4/4uCkRLhks84rB33aitxNZU/uMrnDGGjwrLktoKvPjqHA==}
-    engines: {node: '>=16.14'}
-    hasBin: true
-
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
@@ -2571,11 +2560,6 @@ packages:
 
   victory-vendor@37.3.6:
     resolution: {integrity: sha512-SbPDPdDBYp+5MJHhBCAyI7wKM3d5ivekigc2Dk2s7pgbZ9wIgIBYGVw4zGHBml/qTFbexrofXW6Gu4noGxrOwQ==}
-
-  vite-plugin-enter-dev@0.0.7:
-    resolution: {integrity: sha512-aRq/nYqYuxm1y71UhaVJKv2oELQ3qJC/DGUPk6ZwWpiBi8/hjad71fRNKOKhGqumMCtEkb7ig8Nq/aHVS6EQWg==}
-    peerDependencies:
-      vite: ^5.0.0 || ^6.0.0
 
   vite@7.3.2:
     resolution: {integrity: sha512-Bby3NOsna2jsjfLVOHKes8sGwgl4TT0E6vvpYgnAYDIF/tie7MRaFthmKuHx1NSXjiTueXH3do80FMQgvEktRg==}
@@ -4563,8 +4547,6 @@ snapshots:
 
   pirates@4.0.7: {}
 
-  pnpm@8.6.12: {}
-
   postcss-import@15.1.0(postcss@8.5.14):
     dependencies:
       postcss: 8.5.14
@@ -4948,13 +4930,6 @@ snapshots:
       d3-shape: 3.2.0
       d3-time: 3.1.0
       d3-timer: 3.0.1
-
-  vite-plugin-enter-dev@0.0.7(vite@7.3.2(@types/node@24.12.2)(jiti@1.21.7)):
-    dependencies:
-      '@vitejs/plugin-react': 5.2.0(vite@7.3.2(@types/node@24.12.2)(jiti@1.21.7))
-      vite: 7.3.2(@types/node@24.12.2)(jiti@1.21.7)
-    transitivePeerDependencies:
-      - supports-color
 
   vite@7.3.2(@types/node@24.12.2)(jiti@1.21.7):
     dependencies:

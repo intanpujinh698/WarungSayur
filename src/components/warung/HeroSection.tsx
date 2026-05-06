@@ -31,7 +31,7 @@ export default function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary-light/70 border border-primary/20 rounded-full px-4 py-1.5 mb-6 animate-fade-in-up">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs font-semibold text-primary">Marketplace Sayur No. 1 Indonesia</span>
+            <span className="text-xs font-semibold text-primary">Marketplace untuk warung sayur terbaik!</span>
           </div>
 
           {/* Heading */}
@@ -41,7 +41,7 @@ export default function HeroSection() {
               <span className="text-primary">Langsung</span>
               <span className="absolute bottom-1 left-0 w-full h-2 bg-primary-light rounded-full -z-10" />
             </span>{" "}
-            dari Petani
+            dari warung di sekitarmu!
           </h1>
 
           {/* Subtitle */}
